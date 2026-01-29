@@ -1,0 +1,27 @@
+{
+    "type": ["null", "object"],
+    "additionalProperties": false,
+    "properties": {
+        "id": {
+	        "type": ["null", "integer"]
+        },
+        "givenName": {
+            "type": ["null", "string"]
+        },
+        "familyName": {
+            "type": ["null", "string"]
+        },
+        "status": {
+            "type": ["null", "string"]
+        },
+        "email": {
+            "type": ["null", "string"]
+        },
+        "remoteId": {
+            "type": ["null", "string"]
+        },
+        "employeeNumber": {
+            "type": ["null", "string"]
+        }
+    }
+}

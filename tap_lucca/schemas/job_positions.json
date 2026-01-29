@@ -1,0 +1,75 @@
+{
+    "type": ["null", "object"],
+    "additionalProperties": false,
+    "properties": {
+        "id": {
+	        "type": ["null", "string"]
+        },
+        "type": {
+            "type": ["null", "string"]
+        },
+        "url": {
+            "type": ["null", "string"]
+        },
+        "remoteId": {
+            "type": ["null", "string"]
+        },
+        "employment": {
+            "type": ["null", "object"]
+        },
+        "employee": {
+            "type": ["null", "object"]
+        },
+        "startsOn": {
+            "type": ["null", "string"]
+        },
+        "endsOn": {
+            "type": ["null", "string"]
+        },
+        "jobTitle": {
+            "type": ["null", "string"]
+        },
+        "businessEstablishment": {
+            "type": ["null", "object"]
+        },
+        "department": {
+            "type": ["null", "object"]
+        },
+        "manager": {
+            "type": ["null", "object"]
+        },
+        "jobQualification": {
+            "type": ["null", "object"]
+        },
+        "occupationCategory": {
+            "type": ["null", "object"]
+        },
+        "document": {
+            "type": ["null", "object"]
+        },
+        "status": {
+            "type": ["null", "string"]
+        },
+        "workingTimeArrangement": {
+            "type": ["null", "object"]
+        },
+        "updatedAttributes": {
+            "type": ["null", "array"]
+        },
+        "t9n": {
+            "type": ["null", "object"]
+        },
+        "createdAt": {
+            "type": ["null", "string"]
+        },
+        "lastUpdatedAt": {
+            "type": ["null", "string"]
+        },
+        "createdAt": {
+            "type": ["null", "string"]
+        },
+        "redacted": {
+            "type": ["null", "array"]
+        }
+    }
+}
