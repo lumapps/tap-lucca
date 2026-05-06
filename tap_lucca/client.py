@@ -133,36 +133,10 @@ class LuccaStream(RESTStream):
         params["include"] = "totalCount,links"
         params["limit"] = self.page_size
 
-        # Next page token is a URL, so we can to parse it to extract the query string
-
         if next_page_token:
             return dict(parse_qsl(next_page_token.query))
-    
-        # if self.replication_key:
-        #     params["sort"] = "asc"
-        #     params["order_by"] = self.replication_key
 
         return params
-
-    @override
-    def prepare_request_payload(
-        self,
-        context: Context | None,
-        next_page_token: t.Any | None,
-    ) -> dict | None:
-        """Prepare the data payload for the REST API request.
-
-        By default, no payload will be sent (return None).
-
-        Args:
-            context: The stream context.
-            next_page_token: The next page index or value.
-
-        Returns:
-            A dictionary with the JSON body for a POST requests.
-        """
-        # TODO: Delete this method if no payload is required. (Most REST APIs.)
-        return None
 
     @override
     def parse_response(self, response: requests.Response) -> t.Iterable[dict]:
@@ -179,24 +153,3 @@ class LuccaStream(RESTStream):
             self.records_jsonpath,
             input=response.json(parse_float=decimal.Decimal),
         )
-
-    @override
-    def post_process(
-        self,
-        row: dict,
-        context: Context | None = None,
-    ) -> dict | None:
-        """As needed, append or transform raw data to match expected structure.
-
-        Note: As of SDK v0.47.0, this method is automatically executed for all stream types.
-        You should not need to call this method directly in custom `get_records` implementations.
-
-        Args:
-            row: An individual record from the stream.
-            context: The stream context.
-
-        Returns:
-            The updated record dictionary, or ``None`` to skip the record.
-        """
-        # TODO: Delete this method if not needed.
-        return row
