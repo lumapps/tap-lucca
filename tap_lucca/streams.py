@@ -37,3 +37,13 @@ class JobPositionsStream(LuccaStream):
     replication_key = None
     schema: ClassVar[StreamSchema] = StreamSchema(SCHEMAS_DIR)
 
+
+class DepartmentsStream(LuccaStream):
+    name = "departments"
+    path = "/lucca-api/departments"
+    records_jsonpath = "$.items[*]"
+    stream_params = {}
+
+    primary_keys: t.ClassVar[list[str]] = ["id"]
+    replication_key = None
+    schema: ClassVar[StreamSchema] = StreamSchema(SCHEMAS_DIR)
