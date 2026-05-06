@@ -17,8 +17,6 @@ SCHEMAS_DIR = SchemaDirectory(schemas)
 
 
 class EmployeesStream(LuccaStream):
-    """Define custom stream."""
-
     name = "employees"
     path = "/lucca-api/employees"
     records_jsonpath = "$.items[*]"
@@ -30,8 +28,6 @@ class EmployeesStream(LuccaStream):
 
 
 class JobPositionsStream(LuccaStream):
-    """Define custom stream."""
-
     name = "job_positions"
     path = "/lucca-api/job-positions"
     records_jsonpath = "$.items[*]"
