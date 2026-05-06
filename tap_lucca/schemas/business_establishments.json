@@ -1,0 +1,86 @@
+{
+    "type": ["null", "object"],
+    "additionalProperties": false,
+    "properties": {
+        "id": {
+	        "type": ["null", "string"]
+        },
+        "name": {
+	        "type": ["null", "string"]
+        },
+        "remoteId": {
+          "type": ["null", "string"]
+        },
+        "isArchived": {
+          "type": ["null", "boolean"]
+        },
+        "lastArchivedAt": {
+          "type": ["null", "string"]
+        },
+        "lastUpdatedAt": {
+          "type": ["null", "string"]
+        },
+        "createdAt": {
+          "type": ["null", "string"]
+        },
+        "legalEntity": {
+          "type": ["null", "object"],
+          "properties": {
+            "id": {
+              "type": ["null", "string"]
+            }
+          }
+        },
+        "isHeadquarters": {
+          "type": ["null", "boolean"]
+        },
+        "taxIdentificationNumber": {
+          "type": ["null", "object"],
+          "properties": {
+            "format": {
+              "type": ["null", "string"]
+            },
+            "value": {
+              "type": ["null", "string"]
+            }
+          }
+        },
+        "industryCode": {
+          "type": ["null", "object"],
+          "properties": {
+            "format": {
+              "type": ["null", "string"]
+            },
+            "value": {
+              "type": ["null", "string"]
+            }
+          }
+        },
+        "address": {
+          "type": ["null", "object"],
+          "properties": {
+            "addressLines": {
+              "type": ["null", "array"],
+              "items": {
+                "type": ["null", "string"]
+              }
+            },
+            "postalCode": {
+              "type": ["null", "string"]
+            },
+            "locality": {
+              "type": ["null", "string"]
+            },
+            "administrativeArea": {
+              "type": ["null", "string"]
+            },
+            "countryCode": {
+              "type": ["null", "string"]
+            }
+          }
+        },
+        "timezoneId": {
+          "type": ["null", "string"]
+        }
+    }
+}

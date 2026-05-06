@@ -63,8 +63,9 @@ class TapLucca(Tap):
             A list of discovered streams.
         """
         return [
-            streams.JobPositionsStream(self),
+            streams.BusinessEstablishmentsStream(self),
             streams.DepartmentsStream(self),
+            streams.JobPositionsStream(self),
             streams.LegalEntitiesStream(self),
         ]
 
