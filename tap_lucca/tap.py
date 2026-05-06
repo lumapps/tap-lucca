@@ -65,6 +65,7 @@ class TapLucca(Tap):
         return [
             streams.JobPositionsStream(self),
             streams.DepartmentsStream(self),
+            streams.LegalEntitiesStream(self),
         ]
 
 
