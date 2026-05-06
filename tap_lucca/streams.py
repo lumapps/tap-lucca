@@ -47,3 +47,14 @@ class DepartmentsStream(LuccaStream):
     primary_keys: t.ClassVar[list[str]] = ["id"]
     replication_key = None
     schema: ClassVar[StreamSchema] = StreamSchema(SCHEMAS_DIR)
+
+
+class LegalEntitiesStream(LuccaStream):
+    name = "legal_entities"
+    path = "/lucca-api/legal-entities"
+    records_jsonpath = "$.items[*]"
+    stream_params = {}
+
+    primary_keys: t.ClassVar[list[str]] = ["id"]
+    replication_key = None
+    schema: ClassVar[StreamSchema] = StreamSchema(SCHEMAS_DIR)

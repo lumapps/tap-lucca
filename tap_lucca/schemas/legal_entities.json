@@ -1,0 +1,52 @@
+{
+    "type": ["null", "object"],
+    "additionalProperties": false,
+    "properties": {
+        "id": {
+	        "type": ["null", "string"]
+        },
+        "legalName": {
+	        "type": ["null", "string"]
+        },
+        "remoteId": {
+	        "type": ["null", "string"]
+        },
+        "lastUpdatedAt": {
+            "type": ["null", "string"]
+        },
+        "lastArchivedAt": {
+            "type": ["null", "string"]
+        },
+        "isArchived": {
+            "type": ["null", "boolean"]
+        },
+        "countryCode": {
+	        "type": ["null", "string"]
+        },
+        "currencyCode": {
+	        "type": ["null", "string"]
+        },
+        "taxIdentificationNumber": {
+	        "type": ["null", "object"],
+            "properties": {
+                "format": {
+                    "type": ["null", "string"]
+                },
+                "value": {
+                    "type": ["null", "string"]
+                }
+            }
+        },
+        "industryCode": {
+	        "type": ["null", "object"],
+            "properties": {
+                "format": {
+                    "type": ["null", "string"]
+                },
+                "value": {
+                    "type": ["null", "string"]
+                }
+            }
+        }
+    }
+}
